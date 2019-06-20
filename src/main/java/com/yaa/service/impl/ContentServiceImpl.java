@@ -61,7 +61,9 @@ public class ContentServiceImpl implements ContentService {
     @Override
     public List<Contents> getContentsByKeyword(String keyword) {
         ContentsExample example = new ContentsExample();
-        example.createCriteria().andTitleLike("%"+keyword+"%");
+        Criteria criteria = example.createCriteria();
+        criteria.andTypeEqualTo(Types.ARTICLE.getType());
+        criteria.andTitleLike("%"+keyword+"%");
         example.setOrderByClause("created desc");
         return contentsMapper.selectByExampleWithBLOBs(example);
     }
