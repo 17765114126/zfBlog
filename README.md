@@ -8,8 +8,6 @@
 
 SpringBoot+Thymeleaf+Mysql+myBatis
 
-演示站点：https://www.mecarserver.xyz/
-
 项目的一些说明请看[wiki](https://gitee.com/yangxsa/site_blog/wikis/Home)
 
 #### 电脑端截图
