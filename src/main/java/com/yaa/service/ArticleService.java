@@ -12,11 +12,11 @@ import javax.servlet.http.HttpServletRequest;
  */
 public interface ArticleService {
 
-    PageInfo<Contents> selectArticlePage(int page,int limit);
+    PageInfo<Contents> selectArticlePage(int page, int limit);
 
     ResponseBo deleteArticle(Integer id);
 
-    void editArticle(Integer id,HttpServletRequest request);
+    void editArticle(Integer id, HttpServletRequest request);
 
     void goPublish(HttpServletRequest request);
 

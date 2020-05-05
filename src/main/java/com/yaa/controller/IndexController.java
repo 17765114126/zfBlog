@@ -30,7 +30,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.net.URLEncoder;
 import java.util.List;
-
+@RequestMapping(value = "/install")
 @Controller
 public class IndexController extends BaseController{
 
@@ -72,7 +72,7 @@ public class IndexController extends BaseController{
      * @param limit
      * @return
      */
-    @RequestMapping(value = "/")
+    @RequestMapping(value = "/index")
     public String indexPage(HttpServletRequest request,@RequestParam(value = "limit", defaultValue = "12") int limit){
         return this.index(request, 1, limit);
     }

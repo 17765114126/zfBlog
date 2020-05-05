@@ -9,6 +9,6 @@ public interface SettingService {
 
     void index(HttpServletRequest request);
 
-    ResponseBo saveSite(Map<String,String> params);
+    ResponseBo saveSite(Map<String, String> params);
 
 }

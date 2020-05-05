@@ -16,7 +16,7 @@ public interface PagesService {
 
     ResponseBo deletePages(Integer id);
 
-    void editPages(Integer id,HttpServletRequest request);
+    void editPages(Integer id, HttpServletRequest request);
 
     void goPublish(HttpServletRequest request);
 

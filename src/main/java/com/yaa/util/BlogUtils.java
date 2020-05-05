@@ -298,11 +298,11 @@ public class BlogUtils {
      * @return cookie
      */
     private static Cookie cookieRaw(String name, HttpServletRequest request) {
-        javax.servlet.http.Cookie[] servletCookies = request.getCookies();
+        Cookie[] servletCookies = request.getCookies();
         if (servletCookies == null) {
             return null;
         }
-        for (javax.servlet.http.Cookie c : servletCookies) {
+        for (Cookie c : servletCookies) {
             if (c.getName().equals(name)) {
                 return c;
             }

@@ -9,7 +9,7 @@ import java.util.List;
 
 public interface ContentService {
 
-    PageInfo<Contents> getContents(Integer p,Integer limit);
+    PageInfo<Contents> getContents(Integer p, Integer limit);
 
     Contents getContents(Integer cid);
 

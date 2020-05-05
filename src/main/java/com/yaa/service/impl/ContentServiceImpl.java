@@ -45,7 +45,7 @@ public class ContentServiceImpl implements ContentService {
         example.setOrderByClause("created desc");
         example.createCriteria().andTypeEqualTo(Types.PAGE.getType()).andStatusEqualTo(Types.PUBLISH.getType()).andSlugEqualTo(slug);
         List<Contents> contents = contentsMapper.selectByExampleWithBLOBs(example);
-        if(contents!=null) {
+        if(contents!=null && contents.size() != 0) {
             return contents.get(0);
         }
         return null;
@@ -81,7 +81,7 @@ public class ContentServiceImpl implements ContentService {
         if (null != archives) {
             archives.forEach(archive -> {
                 ContentsExample example = new ContentsExample();
-                ContentsExample.Criteria criteria = example.createCriteria().andTypeEqualTo(Types.ARTICLE.getType()).andStatusEqualTo(Types.PUBLISH.getType());
+                Criteria criteria = example.createCriteria().andTypeEqualTo(Types.ARTICLE.getType()).andStatusEqualTo(Types.PUBLISH.getType());
                 example.setOrderByClause("created desc");
                 String date = archive.getDate();
                 Date sd = DateKit.dateFormat(date, "yyyy年MM月");

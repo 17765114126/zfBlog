@@ -15,11 +15,11 @@ spring:
      favicon:
         enabled: true   #网站默认图标
    datasource:          #数据源
-     url: jdbc:mysql://localhost:3306/blog?useSSL=false&allowPublicKeyRetrieval=true&useUnicode=true&characterEncoding=UTF-8
-     username: root
-     password: 123456
-     driver-class-name: com.mysql.jdbc.Driver
      type: com.alibaba.druid.pool.DruidDataSource
+     driverClassName: com.mysql.jdbc.Driver
+     url: jdbc:mysql://rm-8vb13nmd5388n09m6wo.mysql.zhangbei.rds.aliyuncs.com:3306/blog?useSSL=false&useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true
+     username: zhaofu
+     password: 2MiaoMiao
      dbcp2:
         test-on-borrow: true
         test-while-idle: true
@@ -33,7 +33,7 @@ spring:
         max-idle: 20
         max-total: 20
 server:
-  port: 8000
+  port: 8080
 logging:
   file: log/site.log
 blog:   #自定义属性
@@ -44,15 +44,16 @@ blog:   #自定义属性
 ---
 spring:
    profiles: prod
+   active: 39.101.184.47
    mvc:
        favicon:
          enabled: false
    datasource:
        type: com.alibaba.druid.pool.DruidDataSource
        driverClassName: com.mysql.jdbc.Driver
-       url: jdbc:mysql://127.0.0.1:3306/blog?useUnicode=true&characterEncoding=utf8
-       username: root
-       password: Mysql2018!@#$
+       url: jdbc:mysql://rm-8vb13nmd5388n09m6wo.mysql.zhangbei.rds.aliyuncs.com:3306/blog?useSSL=false&useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true
+       username: zhaofu
+       password: 2MiaoMiao
        initialSize: 1
        minIdle: 3
        maxActive: 20
@@ -68,7 +69,7 @@ spring:
        testOnReturn: false
 
 server:
-  port: 8000
+  port: 8080
 #  ssl:
 #    key-store: classpath:ssl/1534728933823.pfx
 #    key-store-password: 1534728933823
