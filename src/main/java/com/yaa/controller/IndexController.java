@@ -30,7 +30,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.net.URLEncoder;
 import java.util.List;
-@RequestMapping(value = "/install")
+@RequestMapping(value = "")
 @Controller
 public class IndexController extends BaseController{
 
