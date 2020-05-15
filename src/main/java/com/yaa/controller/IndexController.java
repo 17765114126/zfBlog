@@ -50,7 +50,7 @@ public class IndexController extends BaseController{
      * 安装页
      */
     @RequestMapping(value = "/install")
-    public String install(HttpServletRequest request){
+    public String install(){
         if("1".equals(WebConst.initConfig.get("allow_install"))){
             return this.render404();
         }
