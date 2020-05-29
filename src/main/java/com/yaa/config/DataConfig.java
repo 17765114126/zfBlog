@@ -4,11 +4,11 @@ import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.jdbc.ScriptRunner;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.Resource;
 import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -21,9 +21,9 @@ public class DataConfig implements CommandLineRunner {
 
     private Logger logger = LoggerFactory.getLogger(DataConfig.class);
 
-    @Autowired
+    @Resource
     private PathConfig pathConfig;
-    @Autowired
+    @Resource
     private DataSource dataSource;
 
     @Override

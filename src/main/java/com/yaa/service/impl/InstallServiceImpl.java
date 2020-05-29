@@ -7,15 +7,16 @@ import com.yaa.service.InstallService;
 import com.yaa.service.OptionsServer;
 import com.yaa.service.UserService;
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
 
 @Service
 public class InstallServiceImpl implements InstallService {
 
-    @Autowired
+    @Resource
     private OptionsServer optionsServer;
-    @Autowired
+    @Resource
     private UserService userService;
 
     @Override

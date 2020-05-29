@@ -9,18 +9,18 @@ import com.yaa.model.bo.MetasBo;
 import com.yaa.model.vo.ContentsExample;
 import com.yaa.model.vo.MetasExample;
 import com.yaa.service.MetasService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class MetasServiceImpl implements MetasService {
 
-    @Autowired
+    @Resource
     private MetasMapper metasMapper;
-    @Autowired
+    @Resource
     private ContentsMapper contentsMapper;
 
     @Override

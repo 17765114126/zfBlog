@@ -14,9 +14,9 @@ import com.yaa.model.vo.MetasExample;
 import com.yaa.service.ArticleService;
 import com.yaa.util.DateKit;
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Arrays;
 import java.util.List;
@@ -25,9 +25,9 @@ import java.util.List;
 @Service
 public class ArticleServiceImpl implements ArticleService {
 
-    @Autowired
+    @Resource
     private ContentsMapper contentsMapper;
-    @Autowired
+    @Resource
     private MetasMapper metasMapper;
 
     @Override
@@ -45,6 +45,7 @@ public class ArticleServiceImpl implements ArticleService {
         if(id==0){
             return ResponseBo.fail("参数错误");
         }
+
         int count = contentsMapper.deleteByPrimaryKey(id);
         if(count>0){
             return ResponseBo.ok("删除成功！");

@@ -10,7 +10,6 @@ import com.yaa.model.bo.ResponseBo;
 import com.yaa.service.AttachService;
 import com.yaa.util.BlogUtils;
 import org.apache.commons.lang3.exception.ExceptionUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.FileCopyUtils;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -19,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -29,10 +29,10 @@ import java.util.UUID;
 @RequestMapping(value = "/admin/files")
 public class AttachController {
 
-    @Autowired
+    @Resource
     private PathConfig pathConfig;
 
-    @Autowired
+    @Resource
     private AttachService attachService;
 
     /**

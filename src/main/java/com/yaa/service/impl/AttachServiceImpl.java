@@ -10,18 +10,18 @@ import com.yaa.model.bo.ResponseBo;
 import com.yaa.model.vo.AttachExample;
 import com.yaa.service.AttachService;
 import com.yaa.util.DateKit;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.io.File;
 import java.util.List;
 
 @Service
 public class AttachServiceImpl implements AttachService {
 
-    @Autowired
+    @Resource
     private AttachMapper attachMapper;
-    @Autowired
+    @Resource
     private PathConfig pathConfig;
 
     @Override

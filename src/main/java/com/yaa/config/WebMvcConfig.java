@@ -1,20 +1,20 @@
 package com.yaa.config;
 
 import com.yaa.interceptor.BaseInterceptor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
+import javax.annotation.Resource;
 import java.util.Arrays;
 
 @Configuration
 public class WebMvcConfig extends WebMvcConfigurerAdapter {
 
-    @Autowired
+    @Resource
     private PathConfig pathConfig;
-    @Autowired
+    @Resource
     private BaseInterceptor baseInterceptor;
 
     @Override

@@ -6,17 +6,17 @@ import com.yaa.model.Comments;
 import com.yaa.model.Users;
 import com.yaa.model.bo.ResponseBo;
 import com.yaa.service.CommentService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
 @Controller
 @RequestMapping(value = "/admin/comments")
 public class CommentController extends BaseController {
 
-    @Autowired
+    @Resource
     private CommentService commentService;
 
     /**

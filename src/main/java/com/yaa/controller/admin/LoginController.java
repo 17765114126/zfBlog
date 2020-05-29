@@ -5,15 +5,16 @@ import com.yaa.model.Users;
 import com.yaa.model.bo.ResponseBo;
 import com.yaa.service.UserService;
 import org.apache.catalina.servlet4preview.http.HttpServletRequest;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+
+import javax.annotation.Resource;
 
 @Controller
 @RequestMapping(value = "/admin")
 public class LoginController extends BaseController {
 
-    @Autowired
+    @Resource
     private UserService userService;
 
     @ResponseBody

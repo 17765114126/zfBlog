@@ -8,10 +8,10 @@ import com.yaa.service.SettingService;
 import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
 
@@ -20,7 +20,7 @@ public class SettingServiceImpl implements SettingService {
 
     private Logger logger = LoggerFactory.getLogger(SettingServiceImpl.class);
 
-    @Autowired
+    @Resource
     private OptionsMapper optionsMapper;
 
     @Override

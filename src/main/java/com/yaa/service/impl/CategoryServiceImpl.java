@@ -11,10 +11,10 @@ import com.yaa.model.vo.ContentsExample;
 import com.yaa.model.vo.MetasExample;
 import com.yaa.service.CategoryService;
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,9 +22,9 @@ import java.util.List;
 @Service
 public class CategoryServiceImpl implements CategoryService {
 
-    @Autowired
+    @Resource
     private MetasMapper metasMapper;
-    @Autowired
+    @Resource
     private ContentsMapper contentsMapper;
 
     @Override

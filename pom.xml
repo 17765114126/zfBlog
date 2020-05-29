@@ -47,11 +47,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.mybatis.spring.boot</groupId>
-			<artifactId>mybatis-spring-boot-starter</artifactId>
-			<version>1.3.2</version>
-		</dependency>
+		<!--<dependency>-->
+			<!--<groupId>org.mybatis.spring.boot</groupId>-->
+			<!--<artifactId>mybatis-spring-boot-starter</artifactId>-->
+			<!--<version>1.3.2</version>-->
+		<!--</dependency>-->
 
 		<dependency>
 			<groupId>mysql</groupId>
@@ -66,6 +66,36 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+
+		<!--<dependency>-->
+			<!--<groupId>com.baomidou</groupId>-->
+			<!--<artifactId>mybatis-plus-boot-starter</artifactId>-->
+			<!--<version>3.1.2</version>-->
+		<!--</dependency>-->
+		<!--<dependency>-->
+			<!--<groupId>com.baomidou</groupId>-->
+			<!--<artifactId>mybatis-plus-generator</artifactId>-->
+			<!--<version>3.1.2</version>-->
+		<!--</dependency>-->
+		<!--&lt;!&ndash;<dependency>&ndash;&gt;-->
+			<!--&lt;!&ndash;<groupId>com.alibaba</groupId>&ndash;&gt;-->
+			<!--&lt;!&ndash;<artifactId>druid</artifactId>&ndash;&gt;-->
+			<!--&lt;!&ndash;<version>1.1.16</version>&ndash;&gt;-->
+		<!--&lt;!&ndash;</dependency>&ndash;&gt;-->
+		<!--<dependency>-->
+			<!--<groupId>com.alibaba</groupId>-->
+			<!--<artifactId>druid-spring-boot-starter</artifactId>-->
+			<!--<version>1.1.16</version>-->
+		<!--</dependency>-->
+
+		<!-- lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.6</version>
+		</dependency>
+
 		<!--热部署-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -180,16 +210,16 @@
 				<!--&lt;!&ndash;</configuration>&ndash;&gt;-->
 			<!--</plugin>-->
 			<!--自动生成代码插件-->
-            <plugin>
-                <groupId>org.mybatis.generator</groupId>
-                <artifactId>mybatis-generator-maven-plugin</artifactId>
-                <version>1.3.2</version>
-                <configuration>
-                    <configurationFile>${basedir}/src/main/resources/generator/generatorConfig.xml</configurationFile>
-                    <overwrite>true</overwrite>
-                    <verbose>true</verbose>
-                </configuration>
-            </plugin>
+            <!--<plugin>-->
+                <!--<groupId>org.mybatis.generator</groupId>-->
+                <!--<artifactId>mybatis-generator-maven-plugin</artifactId>-->
+                <!--<version>1.3.2</version>-->
+                <!--<configuration>-->
+                    <!--<configurationFile>${basedir}/src/main/resources/generator/generatorConfig.xml</configurationFile>-->
+                    <!--<overwrite>true</overwrite>-->
+                    <!--<verbose>true</verbose>-->
+                <!--</configuration>-->
+            <!--</plugin>-->
 		</plugins>
 	</build>
 

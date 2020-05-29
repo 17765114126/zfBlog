@@ -9,9 +9,9 @@ import com.yaa.model.bo.CommentBo;
 import com.yaa.model.bo.ResponseBo;
 import com.yaa.model.vo.CommentsExample;
 import com.yaa.service.CommentService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,7 +19,7 @@ import java.util.List;
 @Service
 public class CommentServiceImpl implements CommentService {
 
-    @Autowired
+    @Resource
     private CommentsMapper commentsMapper;
 
     @Override

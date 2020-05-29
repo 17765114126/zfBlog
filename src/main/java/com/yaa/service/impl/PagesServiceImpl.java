@@ -14,18 +14,18 @@ import com.yaa.model.vo.MetasExample;
 import com.yaa.service.PagesService;
 import com.yaa.util.DateKit;
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 @Service
 public class PagesServiceImpl implements PagesService {
 
-    @Autowired
+    @Resource
     private ContentsMapper contentsMapper;
-    @Autowired
+    @Resource
     private MetasMapper metasMapper;
 
     @Override
