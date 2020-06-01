@@ -48,12 +48,16 @@ spring:
         max-idle: 20
         max-total: 20
 logging:
-  file: log/site.log
+  file: /opt/blog/log/site.log
 blog:   #自定义属性
-  filePath: D:/var/uploaded_files/
+  #图片文件存储路径
+  filePath: /opt/blog/files/
+  #数据库名称
   database: blog
-  mysqlExec: D:/mysql/mysql-5.7.16-winx64/bin/mysqldump -uroot -p123456 blog
-  backupPath: D:/blog/backup/
+  #MYSQL 登录的命令行 /usr/bin/mysqldump -u 用户名 -p 密码（前面路径代表绝对路径）
+  mysqlExec: /usr/bin/mysqldump -uroot -pMysql2018!@#$ blog
+  #数据库备份文件路径
+  backupPath: /opt/blog/backup/
 ---
 spring:
    profiles: prod

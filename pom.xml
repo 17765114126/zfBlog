@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.yaa.site</groupId>
-	<artifactId>site_blog</artifactId>
+	<artifactId>zf_blog</artifactId>
 	<version>1.0</version>
 	<packaging>jar</packaging>
 
-	<name>site_blog</name>
+	<name>zf_blog</name>
 	<description>my blog site</description>
 
 	<repositories>
@@ -160,7 +160,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>site-blog</finalName>
+		<finalName>zf-blog</finalName>
 		<plugins>
 			<!--打包Jar-->
 			<plugin>
